@@ -1,0 +1,50 @@
+﻿@model DietitianWebApplication.ViewModels.CustomerVMs.CustomerMedicalProfileVM
+@{
+    ViewData["Title"] = "Medical Profile";
+}
+
+<h1>Medical Profile</h1>
+
+<div>
+    @*<h4>Medical Profile</h4>*@
+    <hr />
+</div>
+<div>
+    <table class="table table-striped w-50">
+        <tbody>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Weight)</td>
+                <td>@Html.DisplayFor(model => model.Weight)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Height)</td>
+                <td>@Html.DisplayFor(model => model.Height)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.GoalOfDiet)</td>
+                <td>@Html.DisplayFor(model => model.GoalOfDiet)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ExerciseTime)</td>
+                <td>@Html.DisplayFor(model => model.ExerciseTime)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.LevelOfExercise)</td>
+                <td>@Html.DisplayFor(model => model.LevelOfExercise)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.DailyFood)</td>
+                <td>@Html.DisplayFor(model => model.DailyFood)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.Vitamins)</td>
+                <td>@Html.DisplayFor(model => model.Vitamins)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(model => model.ProblemHistory)</td>
+                <td>@Html.DisplayFor(model => model.ProblemHistory)</td>
+            </tr>
+        </tbody>
+    </table>
+    <a asp-action="CreateMedicalProfile" class="btn btn-primary w-50">Edit</a>
+</div>

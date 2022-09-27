@@ -1,0 +1,106 @@
+﻿@using DietitianWebApplication.ViewModels.CustomerVMs
+@model AddEditMedicalProfileVM
+
+<form asp-action="CreateMedicalProfile" method="post">
+    <section class="h-100" style="background-color: #eee;">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-lg-12 col-xl-11">
+                    <div class="card text-black" style="border-radius: 25px;">
+                        <div class="card-body p-md-5">
+                            <div class="row justify-content-center">
+                                <div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+
+                                    <p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Medical Profile</p>
+
+                                    <input type="text" class="form-control" asp-for="@Model.ID" aria-required="true" hidden />
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c" asp-for="@Model.Weight"></label>
+                                            <input type="number" id="form3Example1c" class="form-control" asp-for="@Model.Weight" aria-required="true" placeholder="Weight" min="2" />
+                                            <span asp-validation-for="@Model.Weight" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c" asp-for="@Model.Height"></label>
+                                            <input type="number" class="form-control" asp-for="@Model.Height" aria-required="true" id="form3Example1c" placeholder="Height" min="25" />
+                                            <span asp-validation-for="@Model.Height" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c" asp-for="@Model.GoalOfDiet"></label>
+                                            <input type="text" id="form3Example1c" class="form-control" asp-for="@Model.GoalOfDiet" aria-required="true" placeholder="Goal Of Diet" />
+                                            <span asp-validation-for="@Model.GoalOfDiet" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c" asp-for="@Model.ExerciseTime"></label>
+                                            <input type="time" id="form3Example1c" class="form-control" asp-for="@Model.ExerciseTime" aria-required="true" placeholder="Exercise Time" />
+                                            <span asp-validation-for="@Model.ExerciseTime" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c" asp-for="@Model.LevelOfExercise"></label>
+                                            <input type="text" id="form3Example3c" class="form-control" asp-for="@Model.LevelOfExercise" placeholder="Level Of Exercise" aria-required="true" />
+                                            <span asp-validation-for="@Model.LevelOfExercise" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c" asp-for="@Model.DailyFood"></label>
+                                            <input type="text" id="form3Example4c" class="form-control" asp-for="@Model.DailyFood" placeholder="Daily Food" aria-required="true" />
+                                            <span asp-validation-for="@Model.DailyFood" class="text-danger"></span>
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c" asp-for="@Model.Vitamins"></label>
+                                            <input type="text" id="form3Example4cd" class="form-control" asp-for="@Model.Vitamins" placeholder="Vitamins" aria-required="true" />
+                                            <span asp-validation-for="@Model.Vitamins" class="text-danger"></span>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex flex-row align-items-center mb-4">
+                                        <div class="form-outline flex-fill mb-0">
+                                            <label class="form-label" for="form3Example1c" asp-for="@Model.ProblemHistory"></label>
+                                            <input type="text" id="form3Example4cd" class="form-control" asp-for="@Model.ProblemHistory" placeholder="Problem History" aria-required="true" />
+                                            <span asp-validation-for="@Model.ProblemHistory" class="text-danger"></span>
+
+                                        </div>
+                                    </div>
+
+                                    <div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+                                        <button id="registerSubmit" type="submit" class="w-100 btn btn-lg btn-primary">Submit</button>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+
+                                    <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/draw1.webp"
+                                         class="img-fluid" alt="Sample image">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
